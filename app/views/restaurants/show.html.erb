@@ -1,0 +1,9 @@
+<h1 class="mb-3"><%= @restaurant.name %></h1>
+
+<%= render "restaurants/infos", restaurant: @restaurant %>
+
+<div class="my-5">
+  <%= render "restaurants/reviews", reviews: @restaurant.reviews %>
+</div>
+
+<%= render "restaurants/back" %>

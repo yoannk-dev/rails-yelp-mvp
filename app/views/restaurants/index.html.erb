@@ -1,0 +1,9 @@
+<h1 class="mb-3">Restaurants</h1>
+
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary mb-4" %>
+
+<div class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to "#{restaurant.name} (#{restaurant.reviews.length} reviews)", restaurant_path(restaurant), class: "list-group-item list-group-item-action" %>
+  <% end %>
+</div>

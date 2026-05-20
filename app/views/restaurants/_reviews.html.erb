@@ -1,0 +1,17 @@
+<h2 class="mb-3">Reviews</h2>
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <div class="bg-light p-4 rounded border">
+      <%= render "reviews/form", restaurant: @restaurant, review: @review %>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <% if reviews.length == 0 %>
+      <p>No review for now</p>
+    <% else %>
+      <% reviews.each do |review| %>
+        <%= render "restaurants/review_card", review: review %>
+      <% end %>
+<% end %>
+  </div>
